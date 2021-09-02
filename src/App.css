@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+*{
+  margin:0;
+  padding:0;  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.titulo{
+    display: flex;
+    justify-content: center;
+    color:aliceblue;
+    background-color: rgb(36, 36, 36,80);
+    font-size: 40px;
+    padding: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* Botão de mostrar esconder cadastro */
+.buttonToggle{
+    display:flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+#buttonToggle{
+    padding: 1vw 2vw;
+}
+#toggle{
+    padding: .6rem;
+    border: 2px solid rgb(36, 36, 36);
+    background-color: rgb(255, 180, 81,0);
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    font-size: clamp(.8em, .8em + +.2vw, 1.9vw);
+    border-radius: .5rem;
+    display: block;
+    cursor: pointer;
+    transition: .6s ease-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#toggle:hover{
+    background-color: rgb(36, 36, 36);
+    color: rgb(223, 155, 92);
+    /* border: 0px solid #ffffff; */
+    transform: scale(1.1);
 }
 
-.App-link {
-  color: #61dafb;
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 3vw;  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+h2{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    padding: .3vw;
+}
+
+.input{
+    padding-bottom: .3vw;
+}
+input{
+    display:flex;
+    justify-content: center;
+    padding: .2vw;
+    margin:.5vw;
+    width:300px; 
+
+}
+
+.screenCadastrar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.cadastrar{
+    width:100px ;
+    padding: .3vw;
+    
+}
+ 
+
+ 
+.containerScreen{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width:350px ;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(36,36,36);
+    border-radius: 1rem;
+    padding: 1rem ;
+    margin: 2rem;
+}
+
+
+img{
+    height: 400px;
+    padding: 1rem;
+ }
+
+p{
+    font-size:larger;
+    text-align: justify;
+    padding: .5vw;
+}
+
+
+h3{
+    color:aliceblue;
+    display:block;
+    margin:auto;
+    text-align:center;
+}
+p{
+    color:aliceblue;
+    font-size:large;
+}
+
+footer{
+    display:flex;
+    justify-content: center;
+    background-color:black;
+    color: aliceblue;
+    padding: 3rem;
+    margin-top:5rem;
 }

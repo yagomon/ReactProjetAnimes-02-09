@@ -1,0 +1,8 @@
+h1{
+    display: flex;
+    justify-content: center;
+    color:aliceblue;
+    background-color: rgb(36, 36, 36,80);
+    font-size: 40px;
+    padding: 1rem;
+}
