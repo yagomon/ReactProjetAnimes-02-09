@@ -87,31 +87,46 @@ export default function App() {
   //Resumo do anime p
   function Resumo(props){
     const resumo= props.resumo;
-    const pre= resumo.substr(0,359);
+    const pre= resumo.substr(0,359) + "...";
 
-    const [leiaMais,setLeiaMais]= useState(false);
-    const nome= leiaMais? 'Esconder <<':'Leia Mais >>'
-    setLeiaMais(pre + "...") 
+    const [leiaMais,setLeiaMais]= useState(true);
 
-
-    return (
-      <>
-      <p>{leiaMais}</p>
-      <a onClick={()=>{setLeiaMais(!resumo)
-      }} >{nome}</a>
-      {resumo}
-      </>
-    )
+    if(leiaMais){
+      return(
+        <>
+        <p>{pre}</p>
+        <a onClick={()=>{setLeiaMais(!leiaMais)}}> Leia Mais </a>
+        </>
+      )} else {
+        return(
+          <>
+          <p>{resumo}</p>
+          <a onClick={()=>{setLeiaMais(!leiaMais)}}> Esconder </a>
+          </>
+      )}
   };
+
+
+  //Video Naruto vs Pain
+  function Video(){
+    return(
+      <div id="video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/n-1jsNLQMXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    )
+  }
 
   //Roda pé
   function Footer(){
     return(
+      
       <footer><p>© Projeto de estudo em React JS Entregue a Blue EdTech ©</p></footer>
+      
     )
   }
 
 
+  // Return pra exportar pro index
   return(
   <div className="screen">
     <Titulo textopre="Meus" textopos=""/>        
@@ -161,6 +176,8 @@ export default function App() {
         </li>
         ))}
     </ul>
+
+    <Video />
 
     <Footer/>
 
